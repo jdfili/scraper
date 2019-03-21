@@ -1,7 +1,7 @@
 .article {
-    transition: 0.3;
+    transition: 0.5s;
 }
 .article:hover {
-    transform: scale(1.1,1.1);
+    transform: scale(1.02,1.02);
     cursor: pointer;
 }
