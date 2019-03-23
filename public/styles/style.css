@@ -8,6 +8,15 @@ nav {
     background: rgb(255,162,0);
     border: black;
 }
+a {
+    color: black;
+}
+.form-group {
+    background-image: url("/images/joeingles.jpg");
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
 hr {
     background: white;
 }

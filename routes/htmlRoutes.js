@@ -5,6 +5,13 @@ var cheerio = require("cheerio");
 module.exports = function (app) {
     app.get("/scrape", function (req, res) {
         // First, we grab the body of the html with axios
+        db.Article.find({})
+            .then(function (dbArticle) {
+                var hbsobject = {
+                    article: dbArticle
+                };
+                res.render("scrape", hbsobject)
+            });
         axios.get("http://www.espn.com/nba/team/_/name/utah/utah-jazz").then(function (response) {
             // Then, we load that into cheerio and save it to $ for a shorthand selector
             var $ = cheerio.load(response.data);
@@ -33,8 +40,6 @@ module.exports = function (app) {
             });
 
             // Send a message to the client
-            console.log(result)
-            res.render("index", result);
         });
     });
     app.get("/", function (req, res) {

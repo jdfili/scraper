@@ -12,6 +12,9 @@ $(document).ready(function () {
             $(this).addClass("clicked");
         }
     });
+    $(".scrape").on("click", function () {
+        location.reload();
+    });
     $(".submit").on("click", function () {
         var value = $(this).attr("data-id");
         var newComment = {
