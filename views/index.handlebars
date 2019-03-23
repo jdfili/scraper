@@ -1,27 +1,28 @@
-<div class="jumbotron">
+<div class="jumbotron ml-2 mt-2 mr-2">
     {{#each article}}
-    <div class="article" data-id="{{this.id}}">
-        <a href="{{this.link}}">{{this.title}}</a><br>
+    <div class="article rounded" data-id="{{this.id}}">   
+        <a href= 'http://espn.com/{{this.link}}'>{{this.title}}</a><br>
         <p>{{this.summary}}</p>
     </div>
     <div class="comment {{this.id}} row">
         <div class="form-group col-md-6">
             <div>
                 <label for="title">Title</label><br>
-                <input name="title" id="title-input{{this.id}}">
+                <input name="title" class="rounded" id="title-input{{this.id}}">
             </div>
             <div>
                 <label for="body">Comment</label><br>
-                <textarea name="body" id="body-input{{this.id}}"></textarea>
+                <textarea name="body" class="rounded" id="body-input{{this.id}}"></textarea>
             </div>
             <button type="submit" data-id="{{this.id}}" class="btn btn-success submit">Submit</button>
         </div>
-        <div class="note col-md-6">
-            <h1>Comments</h1><hr>
+        <div class="note col-md-6 rounded">
+            <h1>Comments</h1>
+            <hr>
             {{#if this.comment}}
             <h3>{{this.comment.title}}</h3>
             <p>{{this.comment.body}}</p>
-            <button class="btn btn-danger delete" data-id="{{this.comment.id}}">X</button>
+            <button class="btn btn-danger delete" data-id="{{this.comment.id}}">Delete</button>
             {{/if}}
         </div>
     </div>

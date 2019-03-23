@@ -1,7 +1,28 @@
-.article {
-    transition: 0.5s;
+body {
+    font-family: 'Roboto', sans-serif;
+}
+nav {
+   box-shadow: 0px 3px #888888;
+}
+.btn {
+    background: rgb(255,162,0);
+    border: black;
+}
+hr {
+    background: white;
+}
+.jumbotron {
+ background: white;
 }
 .article:hover {
-    transform: scale(1.02,1.02);
+    background: rgb(255,162,0);
     cursor: pointer;
+}
+.nav-link:hover {
+    background: rgb(255,162,0);
+}
+.note {
+    background: rgb(18,32,65);
+    color: white;
+    border: 1px double black;
 }
